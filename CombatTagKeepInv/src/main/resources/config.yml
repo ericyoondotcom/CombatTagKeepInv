@@ -1,0 +1,11 @@
+# How long a player will be combat tagged for when hit, in seconds.
+cooldownTime: 60
+
+# Set to true to kill combat-tagged players when they disconnect.
+killCombatLoggers: false
+
+# The names of the worlds in which the plugin will be active.
+worlds:
+  - world
+  - world_nether
+  - world_the_end
