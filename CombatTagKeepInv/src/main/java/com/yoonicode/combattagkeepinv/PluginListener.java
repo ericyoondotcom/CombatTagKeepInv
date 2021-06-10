@@ -20,7 +20,10 @@ public class PluginListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void debugTagPlayer(PlayerDropItemEvent event){
-        main.combatTagPlayer(event.getPlayer());
+        if(event.getItemDrop() == null || event.getItemDrop().getCustomName() == null) return;
+        if(event.getItemDrop().getCustomName().equalsIgnoreCase("ctki debug")) {
+            main.combatTagPlayer(event.getPlayer());
+        }
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
